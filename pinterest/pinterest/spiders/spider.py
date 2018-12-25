@@ -80,7 +80,7 @@ class spider(Spider):
         try:
             self.driver.get(response.url)
             sleep(1)
-            i = 1
+            i = 0
             while True:
                 self.driver.execute_script(self.js.format(5000*i))
                 self.logger.info('scroll 第%s次' % i)
@@ -117,7 +117,7 @@ class spider(Spider):
         try:
             self._driver.get(response.url)
             sleep(1)
-            i = 1
+            i = 0
             while True:
                 self._driver.execute_script(self.js.format(5000*i))
                 self.logger.info('scroll 第%s次' % i)
